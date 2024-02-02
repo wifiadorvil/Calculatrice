@@ -1,3 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+main {
+  padding: 57px 27px;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: right 75%;
+}
+.main--title{
+  margin: 0;
+  font-size: 39px;
+  letter-spacing: -0.05em;
+}
+.main--facts{
+  margin-top: 46px;
+}
+.main--facts > li{
+  line-height: 19px;
+  padding-block: 10px;
+}
+.main--facts > li::marker{
+  font-size: 1.9rem;
+  color: #61DAFB;
+}
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background-color: #282D35;
+}
+nav {
+  padding: 30px 25px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  background-color: #21222a;
+}
+.nav--title,
+.nav--logo_Stext {
+  margin: 0;
+}
+.nav--logo_text {
+  margin-right: auto;
+  color: #61dafb;
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+}
+nav {
+  font-weight: 700;
+  color: #deebf8;
+}
+
+.nav--icon {
+  width: 60px;
+}
 .App {
   text-align: center;
 }
