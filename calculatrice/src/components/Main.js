@@ -2,32 +2,26 @@ import React, { useState } from "react";
 export default function Main() {
   const [valeurCalcul, setValeurCalcul] = useState("");
 
-  /*const handleButtonClick = (value) => {
-    if (valeurCalcul === '0' || valeurCalcul === 'Error') {
-      setValeurCalcul(value);
-    } else {
-      setValeurCalcul(valeurCalcul + value);
-    }
-  }*/
-  const resetCalculator = () => {
-    setValeurCalcul("");
-  };
+
+
   const handleButtonClick = (value) => {
     if (value === "=") {
       try {
-        // Utilise eval pour évaluer l'expression mathématique
         const result = eval(valeurCalcul);
-        setValeurCalcul(result.toString());
+        setValeurCalcul((parseFloat(result)).toFixed(7).toString());
       } catch (error) {
         setValeurCalcul("Error");
       }
-    } else if (value === "DEL") {
+    }else if (value === '%') {
+      try {
+          setValeurCalcul((parseFloat(eval(valeurCalcul)) / 100).toFixed(7).toString());
+      } catch (error) {
+          setValeurCalcul('Error');
+      }} else if (value === "DEL") {
       setValeurCalcul((p) => p.slice(0, p.length - 1));
     } else if (value === "AC") {
-      // Efface tout
       setValeurCalcul("");
     } else {
-      // Ajoute la valeur du bouton à l'affichage
       setValeurCalcul(valeurCalcul + value);
     }
   };
@@ -46,7 +40,7 @@ export default function Main() {
         {["AC", "DEL", "%",'/'].map((i) => (
             <button
               className={"buttonCalcul"}
-              onClick={i==='AC'?resetCalculator:() => handleButtonClick(i)}
+              onClick={() => handleButtonClick(i)}
             >
               {i}
             </button>
