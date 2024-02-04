@@ -12,7 +12,7 @@ Bouton égal pour afficher le résultat du calcul.
 
 ### Cloner le lien GitHub sur votre machine locale
 ```
-git clone git clone https://github.com/wifiadorvil/Calculatrice
+git clone https://github.com/wifiadorvil/Calculatrice
 ```
 ### Ouvrir le répertoire  Calculatrice
 ```
