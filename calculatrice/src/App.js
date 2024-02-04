@@ -4,7 +4,7 @@ import Main from "./components/Main";
 function App() {
   return (
     <div className="container">
-      <NavBar/>
+    <NavBar/>
    <Main/>
     </div>
   );
